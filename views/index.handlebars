@@ -1,0 +1,27 @@
+
+
+<div class="jumbotron">
+  <h1 class="display-4">Bem vindo ao Blog NodeJS!</h1>
+  <p class="lead">O blog voltado para o desenvolvimento em nodejs </p>
+  <hr class="my-4">
+  <p>Este blog foi desenvolvido através do curso de Nodejs do professor Victor Lima. Com o intuito de aprender e desenvolver abilidades de desenvolvimento com as ferramentas Nodejs, NPM, Express, MongoDB, Handlebars, BodyParser e Passport. Aproveite a expreriencia!!!  </p>
+</div>
+
+<h2>Postagens recentes: </h2>
+
+{{#each postagens}}
+
+<div class="card mt-3">
+    <div class="card-body">
+        <h3>{{titulo}}</h3>
+        <p>{{descricao}}</p>
+        <br>
+       <a href="/postagem/{{slug}}"><button class="btn btn-success">Leia mais</button></a>
+        <hr>
+        <small>Categoria: {{categoria.nome}}</small>
+        <small>Data da postagem: {{data}}</small>
+    </div>
+</div>
+{{else}}
+    <h5>Nenhuma postagem</h5>
+{{/each}}
